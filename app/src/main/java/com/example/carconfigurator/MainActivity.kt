@@ -74,8 +74,8 @@ class MainActivity : AppCompatActivity() {
             if (airconChecked) selectedOptions.add("Klimatyzacja")
             if (leatherChecked) selectedOptions.add("Skórzane siedzenia")
             if (sunroofChecked) selectedOptions.add("Szyberdach")
-            if (bluetoothChecked) selectedOptions.add("Bluetooth")
-            if (windowsChecked) selectedOptions.add("Power Windows")
+            if (bluetoothChecked) selectedOptions.add("Głośniki na bluetooth")
+            if (windowsChecked) selectedOptions.add("Przyciemniane szyby")
 
             var i=0
             var order = "Zamówienie: \n$selectedCar \n"
