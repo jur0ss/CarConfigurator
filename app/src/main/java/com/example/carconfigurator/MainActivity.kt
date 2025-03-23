@@ -1,9 +1,13 @@
 package com.example.carconfigurator
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -45,6 +49,47 @@ class MainActivity : AppCompatActivity() {
                 myImageView.setImageResource(images[2])
             }
         }
+
+        val orderButton = findViewById<Button>(R.id.order_button)
+
+        val textView = findViewById<TextView>(R.id.textview)
+
+        orderButton.setOnClickListener {
+            val selectedCar = when(myRadioGroup.checkedRadioButtonId)
+            {
+                R.id.sedan_radio -> "Sedan"
+                R.id.suv_radio -> "SUV"
+                R.id.hatchback_radio -> "Hatchback"
+                else -> "Nie wybrano auta"
+            }
+
+            val airconChecked = findViewById<CheckBox>(R.id.aircon).isChecked
+            val leatherChecked = findViewById<CheckBox>(R.id.leather).isChecked
+            val sunroofChecked = findViewById<CheckBox>(R.id.sunroof).isChecked
+            val bluetoothChecked = findViewById<CheckBox>(R.id.bluetooth).isChecked
+            val windowsChecked = findViewById<CheckBox>(R.id.windows).isChecked
+
+            val selectedOptions = mutableListOf<String>()
+
+            if (airconChecked) selectedOptions.add("Klimatyzacja")
+            if (leatherChecked) selectedOptions.add("Skórzane siedzenia")
+            if (sunroofChecked) selectedOptions.add("Szyberdach")
+            if (bluetoothChecked) selectedOptions.add("Bluetooth")
+            if (windowsChecked) selectedOptions.add("Power Windows")
+
+            var i=0
+            var order = "Zamówienie: \n$selectedCar \n"
+            while(i<=selectedOptions.size-1){
+                order = order +  selectedOptions[i] + "\n"
+                i++
+            }
+            textView.text = order
+
+        }
+
+
+
+
 
 
 

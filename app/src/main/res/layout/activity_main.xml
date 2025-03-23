@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
+        android:layout_margin="2dp"
         android:orientation="vertical"
         android:background="#91d470">
 
@@ -22,7 +22,6 @@
             android:layout_height="wrap_content"
             android:text="Konfigurator"
             android:layout_gravity="center_horizontal"
-            android:layout_margin="10dp"
             android:textSize="23sp"
             android:textColor="@color/black"
             />
@@ -30,9 +29,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:paddingStart="1dp"
-            android:paddingEnd="15dp"
+            android:layout_margin="1dp"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="25dp"
             app:cardElevation="1dp"
@@ -44,9 +41,8 @@
             android:id="@+id/car_radiogroup"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:layout_gravity="center"
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
             >
 
             <RadioButton
@@ -78,8 +74,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:paddingStart="1dp"
-            android:paddingEnd="15dp"
             app:cardBackgroundColor="@color/white"
             app:cardCornerRadius="25dp"
             app:cardElevation="1dp"
@@ -90,7 +84,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="15dp"
+                android:padding="5dp"
                 >
 
                 <CheckBox
@@ -141,6 +135,19 @@
             android:scaleType="fitCenter"
             android:layout_gravity="center"
             />
+
+        <Button
+            android:id="@+id/order_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Złóż zamówienie"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            >
+        </Button>
 
         <TextView
             android:id="@+id/textview"
