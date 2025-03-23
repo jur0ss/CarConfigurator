@@ -13,8 +13,71 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:orientation="vertical"
-        android:background="#3a522e">
+        android:background="#91d470">
 
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Konfigurator"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:textSize="23sp"
+            android:textColor="@color/black"
+            />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingStart="1dp"
+            android:paddingEnd="15dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="1dp"
+            android:layout_gravity="center"
+            >
+
+
+        <RadioGroup
+            android:id="@+id/car_radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            >
+
+            <RadioButton
+                android:id="@+id/sedan_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sedan"
+                />
+
+            <RadioButton
+                android:id="@+id/suv_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUV"
+                />
+
+            <RadioButton
+                android:id="@+id/hatchback_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hatchback"
+                />
+
+        </RadioGroup>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        </RadioGroup>
 
 
 
